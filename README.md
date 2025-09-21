@@ -10,9 +10,8 @@ A modern, responsive portfolio website showcasing my work as a Data Engineer and
 
 Feel free to reach out for collaboration opportunities!
 
-- **Email:** gulcihangulmez@gmail.com
-- **LinkedIn:** [linkedin.com/in/gulcihan-gulmez](https://linkedin.com/in/gulcihan-gulmez)
-- **GitHub:** [github.com/gulcihanglmz](https://github.com/gulcihanglmz)
+- **Email:**[Email](gulmezgulcihan44@gmail.com)
+- **LinkedIn:** [linkedin](https://www.linkedin.com/in/g%C3%BClcihan-g%C3%BClmez-engineer06/)
 
 ## 📄 License
 
