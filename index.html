@@ -8,8 +8,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     
-    <!-- EmailJS CDN -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <style>
         * {
             margin: 0; /* Tüm elementlerin margin'ini sıfırla */
@@ -1782,49 +1781,9 @@
                 <p class="contact-subtitle">Ready to bring your next project to life? I'd love to hear from you!</p>
             </div>
             
-            <!-- Contact Form -->
-            <div class="contact-form-container">
-                <form class="contact-form" id="contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="from_name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="from_email" placeholder="Your@email.com" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a topic...</option>
-                            <option value="Computer Vision">Computer Vision</option>
-                            <option value="Data Engineering & Analytics">Data Engineering & Analytics</option>
-                            <option value="Machine Learning">Machine Learning</option>
-                            <option value="Collaboration">Collaboration</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn" id="submit-btn">
-                        <span>📧</span> Send Message
-                    </button>
-                    
-                    <!-- Status Messages -->
-                    <div id="form-status" style="margin-top: 1rem; text-align: center; font-size: 0.9rem;"></div>
-                </form>
-            </div>
-            
             <!-- Social Links -->
             <div class="contact-social">
-                <h3 class="social-title">Or connect with me directly</h3>
+                <h3 class="social-title">Connect with me directly</h3>
                 <div class="social-icons">
                     <a href="mailto:gulmezgulcihan44@gmail.com" class="social-icon" title="Email">
                         📧
@@ -1846,38 +1805,16 @@
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer style="background: #0a0a0a; padding: 2rem 0; text-align: center; border-top: 1px solid #333; margin-top: 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <p style="color: #888; font-size: 0.9rem; margin: 0;">
+                © 2025 Gulcihan Gulmez. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
     <script>
-        // EmailJS Initialization
-        (function(){
-            emailjs.init("YOUR_PUBLIC_KEY"); // Buraya kendi public key'ini koyacaksın
-        })();
-
-        // Contact Form Handler
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const submitBtn = document.getElementById('submit-btn');
-            const statusDiv = document.getElementById('form-status');
-            
-            // Button loading state
-            submitBtn.innerHTML = '<span>⏳</span> Sending...';
-            submitBtn.disabled = true;
-            
-            // Send email via EmailJS
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                .then(function() {
-                    statusDiv.innerHTML = '<span style="color: #4CAF50;">✅ Message sent successfully!</span>';
-                    document.getElementById('contact-form').reset();
-                    submitBtn.innerHTML = '<span>📧</span> Send Message';
-                    submitBtn.disabled = false;
-                }, function(error) {
-                    statusDiv.innerHTML = '<span style="color: #f44336;">❌ Failed to send message. Please try again.</span>';
-                    submitBtn.innerHTML = '<span>📧</span> Send Message';
-                    submitBtn.disabled = false;
-                    console.log('FAILED...', error);
-                });
-        });
-
         // Smooth scroll navigasyonu
         document.querySelectorAll('a[href^="#"]').forEach(anchor => { // Tüm iç linkleri seç
             anchor.addEventListener('click', function (e) { // Click event ekle
